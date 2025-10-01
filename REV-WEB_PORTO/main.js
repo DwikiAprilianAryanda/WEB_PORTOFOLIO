@@ -2,22 +2,31 @@
    MAIN.JS - JAVASCRIPT UNTUK INTERAKTIVITAS
    ================================================================ */
 
-// 1. MENU MOBILE TOGGLE
+/* ================================================================
+   MENU TOGGLE (VERSI BARU DENGAN TOMBOL CLOSE)
+   ================================================================ */
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close'); // Anda perlu menambahkan ID ini ke tombol close di HTML jika ada
+      navClose = document.getElementById('nav-close');
 
+/* Tampilkan Menu */
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
     });
 }
 
-// Sembunyikan menu saat link di-klik
+/* Sembunyikan Menu */
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
+
+/* Sembunyikan menu saat link di-klik (opsional tapi bagus) */
 const navLink = document.querySelectorAll('.nav-link');
 
 function linkAction() {
-    const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show-menu');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
@@ -155,4 +164,39 @@ portfolioPopup.addEventListener('click', (e) => {
     if (e.target === portfolioPopup) {
         closePortfolioPopup();
     }
+});
+
+/* ================================================================
+   FUNGSI KIRIM PESAN KE WHATSAPP
+   ================================================================ */
+// 1. Ganti dengan nomor WhatsApp Anda (gunakan format 62, bukan 0)
+const nomorWhatsApp = '6285753039151';
+
+// 2. Pilih elemen form berdasarkan ID yang tadi kita buat
+const formKontak = document.getElementById('contact-form');
+
+// 3. Tambahkan event listener untuk 'submit' pada form
+formKontak.addEventListener('submit', function (e) {
+    
+    // Hentikan aksi default form (yang akan me-reload halaman)
+    e.preventDefault();
+
+    // 4. Ambil nilai dari setiap input di dalam form
+    const nama = document.getElementById('nama').value;
+    const email = document.getElementById('email').value; // Meskipun tidak dikirim ke WA, baik untuk validasi nanti
+    const subjek = document.getElementById('subjek').value;
+    const pesan = document.getElementById('pesan').value;
+
+    // 5. Buat template pesan yang akan dikirim
+    // Gunakan \n untuk membuat baris baru
+    const templatePesan = `Halo, nama saya *${nama}*.\n\n*Subjek:*\n${subjek}\n\n*Pesan:*\n${pesan}\n\n_Pesan ini dikirim dari website portofolio Anda._`;
+
+    // 6. Encode pesan agar sesuai dengan format URL
+    const pesanEncoded = encodeURIComponent(templatePesan);
+
+    // 7. Buat link WhatsApp lengkap
+    const whatsappURL = `https://wa.me/${nomorWhatsApp}?text=${pesanEncoded}`;
+    
+    // 8. Buka link WhatsApp di tab baru
+    window.open(whatsappURL, '_blank');
 });

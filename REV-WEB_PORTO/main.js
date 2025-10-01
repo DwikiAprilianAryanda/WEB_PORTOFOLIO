@@ -97,3 +97,62 @@ function toggleSkills(){
 skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills);
 });
+
+/* ================================================================
+   JS UNTUK PORTOFOLIO MODAL/POPUP
+   ================================================================ */
+// 1. Pilih semua elemen yang dibutuhkan
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+const portfolioPopup = document.querySelector('.portfolio-popup');
+const portfolioPopupClose = document.querySelector('.portfolio-popup-close');
+const popupImg = portfolioPopup.querySelector('.portfolio-popup-img');
+const popupTitle = portfolioPopup.querySelector('.portfolio-popup-title');
+const popupDescription = portfolioPopup.querySelector('.portfolio-popup-description');
+const popupLinksContainer = portfolioPopup.querySelector('.portfolio-popup-links');
+
+// 2. Fungsi untuk membuka popup dan mengisi data
+const openPortfolioPopup = (card) => {
+    // Ambil data dari kartu yang diklik
+    const imgSrc = card.querySelector('.portfolio-img').getAttribute('src');
+    const title = card.querySelector('.portfolio-title').innerHTML;
+    const hiddenContent = card.querySelector('.portfolio-hidden-content');
+    const description = hiddenContent.querySelector('.portfolio-description').innerHTML;
+    const links = hiddenContent.querySelectorAll('a');
+
+    // Isi data ke dalam popup
+    popupImg.src = imgSrc;
+    popupTitle.innerHTML = title;
+    popupDescription.innerHTML = description;
+
+    // Kosongkan container link sebelum mengisi
+    popupLinksContainer.innerHTML = '';
+    // Tambahkan link ke dalam popup
+    links.forEach(link => {
+        popupLinksContainer.appendChild(link.cloneNode(true));
+    });
+
+    // Tampilkan popup dengan animasi
+    portfolioPopup.classList.add('active');
+};
+
+// 3. Tambahkan event listener untuk setiap kartu portofolio
+portfolioCards.forEach(card => {
+    card.addEventListener('click', () => {
+        openPortfolioPopup(card);
+    });
+});
+
+// 4. Fungsi untuk menutup popup
+const closePortfolioPopup = () => {
+    portfolioPopup.classList.remove('active');
+};
+
+// 5. Tambahkan event listener untuk tombol close dan area overlay
+portfolioPopupClose.addEventListener('click', closePortfolioPopup);
+
+portfolioPopup.addEventListener('click', (e) => {
+    // Jika yang diklik adalah area overlay (bukan konten di dalamnya)
+    if (e.target === portfolioPopup) {
+        closePortfolioPopup();
+    }
+});

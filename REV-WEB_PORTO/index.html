@@ -9,20 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    </head>
-    
+</head>
 <body>
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-    <header class="header">
+
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav-logo">Dwiki Aprilian Aryanda</a>
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#beranda" class="nav-link">Beranda</a></li>
                     <li class="nav-item"><a href="#tentang" class="nav-link">Tentang Saya</a></li>
@@ -30,257 +28,187 @@
                     <li class="nav-item"><a href="#portofolio" class="nav-link">Portofolio</a></li>
                     <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
                 </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
             </div>
-            <div class="nav-toggle">
-                <nav class="nav container">
-
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="#beranda" class="nav-link">Beranda</a></li>
-                        <li class="nav-item"><a href="#tentang" class="nav-link">Tentang Saya</a></li>
-                        <li class="nav-item"><a href="#keahlian" class="nav-link">Keahlian</a></li>
-                        <li class="nav-item"><a href="#portofolio" class="nav-link">Portofolio</a></li>
-                        <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
-                    </ul>
-                    <div class="nav-close" id="nav-close">
-                        <i class='bx bx-x'></i>
-                    </div>
-                </div>
-
-                <div class="nav-toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
+            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
         </nav>
     </header>
 
     <main>
-
-        <section class="hero" id="beranda">
+        <section class="beranda section hidden" class="hero" id="beranda">
+            <div id="tsparticles"></div>
             <div class="hero-container container">
                 <div class="hero-social">
                     <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ee0hmgt" target="_blank" class="hero-social-icon"><i class='bx bxl-instagram'></i></a>
                     <a href="https://github.com/DwikiAprilianAryanda" target="_blank" class="hero-social-icon"><i class='bx bxl-github'></i></a>
                     <a href="https://api.whatsapp.com/send/?phone=6285753039151" target="_blank" class="hero-social-icon"><i class='bx bx-phone'></i></a>
                 </div>
-
                 <div class="hero-image">
-                    <img src="assets/profil.jpg" alt="">
+                    <img src="assets/profil.jpg" alt="Foto Profil Dwiki">
                 </div>
-
                 <div class="hero-data">
                     <h1 class="hero-title">Hai, Saya Dwiki Aprilian Aryanda</h1>
                     <h3 class="hero-subtitle">Data Analyst and Spesialis Python</h3>
-                    <p class="hero-description">
-                        Spesialis dalam menciptakan aplikasi web yang modern dan intuitif.
-                        Selamat datang di ruang digital saya.
-                    </p>
+                    <p class="hero-description">Spesialis dalam menciptakan aplikasi web yang modern dan intuitif. Selamat datang di ruang digital saya.</p>
                     <a href="#kontak" class="button">Hubungi Saya &#128075;</a>
                 </div>
             </div>
         </section>
 
-        <section class="about section" id="tentang">
+        <section class="about section hidden" id="tentang">
             <h2 class="section-title">Tentang Saya</h2>
             <span class="section-subtitle">Perkenalan Singkat</span>
-
             <div class="about-container container grid">
-                <div class="about-image">
-                     <img src="assets/profil2.jpg" alt="">
-                </div>
-
+                <div class="about-image"><img src="assets/profil2.jpg" alt="Foto Dwiki"></div>
                 <div class="about-data">
-                    <p class="about-description">
-                        Saya seorang Data Analyst dan Spesialis Python dengan pengalaman lebih dari 2 tahun. Saya sangat antusias dalam menganalisis dan memvisualisasikan data serta memecahkan masalah melalui kode dan desain yang bersih. Saya percaya bahwa teknologi dapat memberikan dampak positif jika digunakan dengan benar.
-                    </p>
+                    <p class="about-description">Saya seorang Data Analyst dan Spesialis Python dengan pengalaman lebih dari 2 tahun. Saya sangat antusias dalam menganalisis dan memvisualisasikan data serta memecahkan masalah melalui kode dan desain yang bersih. Saya percaya bahwa teknologi dapat memberikan dampak positif jika digunakan dengan benar.</p>
                     <div class="about-info">
-                        <div>
-                            <span class="about-info-title">02+</span>
-                            <span class="about-info-name">Tahun <br> pengalaman</span>
-                        </div>
-                        <div>
-                            <span class="about-info-title">10+</span>
-                            <span class="about-info-name">Proyek <br> selesai</span>
-                        </div>
-                        <div>
-                            <span class="about-info-title">05+</span>
-                            <span class="about-info-name">Kolaborasi <br> pernah dilakukan</span>
-                        </div>
+                        <div><span class="about-info-title">02+</span><span class="about-info-name">Tahun <br> pengalaman</span></div>
+                        <div><span class="about-info-title">10+</span><span class="about-info-name">Proyek <br> selesai</span></div>
+                        <div><span class="about-info-title">05+</span><span class="about-info-name">Kolaborasi <br> pernah dilakukan</span></div>
                     </div>
-                    <div class="about-buttons">
-                        <a download="" href="assets/tedi.jpg" class="button">Unduh CV</a>
-                    </div>
+                    <div class="about-buttons"><a download="CV_Dwiki_Aprilian_Aryanda.pdf" href="assets/tedi.jpg" class="button">Unduh CV</a></div>
                 </div>
             </div>
         </section>
 
-        <section class="skills section" id="keahlian">
+        <section class="skills section hidden" id="keahlian">
             <h2 class="section-title">Keahlian Saya</h2>
             <span class="section-subtitle">Kemampuan Teknis & Profesional</span>
-
-            <div class="skills-content skills-open"> <div class="skills-header">
-                    <i class='bx bx-data skills-icon'></i>
-                    <div>
-                        <h3 class="skills-title">Data Analyst</h3>
-                        <span class="skills-subtitle">Visualisasi dan Strategi</span>
+            <div class="skills-container container grid">
+                <div class="skills-content skills-open"> 
+                    <div class="skills-header">
+                        <i class='bx bx-data skills-icon'></i>
+                        <div>
+                            <h3 class="skills-title">Data Analyst</h3>
+                            <span class="skills-subtitle">Visualisasi dan Strategi</span>
+                        </div>
+                        <i class='bx bx-chevron-down skills-arrow'></i>
                     </div>
-                    <i class='bx bx-chevron-down skills-arrow'></i>
+                    <div class="skills-box">
+                        <div class="skills-group">
+                            <div class="skills-data"><span class="skill-name">MySQL</span></div>
+                            <div class="skills-data"><span class="skill-name">Excel</span></div>
+                            <div class="skills-data"><span class="skill-name">Python</span></div>
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-data"><span class="skill-name">Tableau</span></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills-box">
-                    <div class="skills-group">
-                        <div class="skills-data"><span class="skill-name">MySQL</span></div>
-                        <div class="skills-data"><span class="skill-name">Excel</span></div>
-                        <div class="skills-data"><span class="skill-name">Python</span></div>
+                <div class="skills-content">
+                    <div class="skills-header">
+                        <i class='bx bxl-python skills-icon'></i>
+                        <div>
+                            <h3 class="skills-title">Spesialis Python</h3>
+                            <span class="skills-subtitle">Library Populer</span>
+                        </div>
+                        <i class='bx bx-chevron-down skills-arrow'></i>
                     </div>
-                    <div class="skills-group">
-                        <div class="skills-data"><span class="skill-name">Tableau</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-content">
-                <div class="skills-header">
-                    <i class='bx bxl-python skills-icon'></i>
-                    <div>
-                        <h3 class="skills-title">Spesialis Python</h3>
-                        <span class="skills-subtitle">Library Populer</span>
-                    </div>
-                    <i class='bx bx-chevron-down skills-arrow'></i>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-group">
-                        <div class="skills-data"><span class="skill-name">Numpy</span></div>
-                        <div class="skills-data"><span class="skill-name">Pandas</span></div>
-                        <div class="skills-data"><span class="skill-name">Matplotlib</span></div>
-                        <div class="skills-data"><span class="skill-name">Seaborn</span></div>
-                        <div class="skills-data"><span class="skill-name">Github</span></div>
+                    <div class="skills-box">
+                        <div class="skills-group">
+                            <div class="skills-data"><span class="skill-name">Numpy</span></div>
+                            <div class="skills-data"><span class="skill-name">Pandas</span></div>
+                            <div class="skills-data"><span class="skill-name">Matplotlib</span></div>
+                            <div class="skills-data"><span class="skill-name">Seaborn</span></div>
+                            <div class="skills-data"><span class="skill-name">Github</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio section" id="portofolio">
+        <section class="portfolio section hidden" id="portofolio">
             <h2 class="section-title">Portofolio</h2>
             <span class="section-subtitle">Karya dan Kegiatan Terbaru Saya</span>
-
             <div class="portfolio-container container">
                 <article class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                        <img src="assets/aslab.jpg" alt="Gambar Proyek E-Commerce" class="portfolio-img">
-                    </div>
+                    <div class="portfolio-image-wrapper"><img src="assets/aslab.jpg" alt="Foto Asisten Laboratorium" class="portfolio-img"></div>
                     <div class="portfolio-data-hover">
-                        <h3 class="portfolio-title">Asisten Labotarium</h3>
+                        <h3 class="portfolio-title">Asisten Laboratorium</h3>
                         <div class="portfolio-hidden-content">
-                            <p class="portfolio-description">Saya adalah seorang Asisten Labotarium program studi Informatika di Universitas Mulawarman yang mengajar praktikum Algoritma Pemrograman Dasar.</p>
+                            <p class="portfolio-description">Saya adalah seorang Asisten Laboratorium program studi Informatika di Universitas Mulawarman yang mengajar praktikum Algoritma Pemrograman Dasar.</p>
                             <a href="https://www.instagram.com/p/DNsgFnS4nKG/?img_index=3&igsh=MmRlamRhZG80czhj" target="_blank">Lihat Bukti &rarr;</a>
                         </div>
                     </div>
                 </article>
                 <article class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                        <img src="assets/Screenshot 2025-10-01 121055.png" alt="Gambar Proyek E-Commerce" class="portfolio-img">
-                    </div>
+                    <div class="portfolio-image-wrapper"><img src="assets/Screenshot 2025-10-01 121055.png" alt="Visualisasi Data Python" class="portfolio-img"></div>
                     <div class="portfolio-data-hover">
                         <h3 class="portfolio-title">Visualisasi Data dengan Python</h3>
                         <div class="portfolio-hidden-content">
-                            <p class="portfolio-description">Ini adalah sebuah contoh fake project dengan data asli yang saya visualisasikan menggunakan library numpy, matplotlib, pandas, dan seaborn pada bahasa pemrograman python.</p>
+                            <p class="portfolio-description">Ini adalah sebuah contoh project dengan data asli yang saya visualisasikan menggunakan library populer Python seperti Pandas, Matplotlib, dan Seaborn.</p>
                             <a href="https://github.com/DwikiAprilianAryanda/Visualisasi_Data_Python" target="_blank">Lihat Kode &rarr;</a>
                         </div>
                     </div>
                 </article>
-
                 <article class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                        <img src="assets/Screenshot 2025-10-01 120918.png" alt="Gambar Aplikasi Manajemen Tugas" class="portfolio-img">
-                    </div>
+                    <div class="portfolio-image-wrapper"><img src="assets/Screenshot 2025-10-01 120918.png" alt="Aplikasi CRUD Python" class="portfolio-img"></div>
                     <div class="portfolio-data-hover">
                         <h3 class="portfolio-title">CRUD dengan Python</h3>
                         <div class="portfolio-hidden-content">
-                            <p class="portfolio-description">Ini adalah salah satu contoh hasil kolaborasi saya untuk membuat sebuah CRUD Manajemen Produk Laptop dengan bahasa pemrograman python.</p>
+                            <p class="portfolio-description">Ini adalah salah satu contoh hasil kolaborasi saya untuk membuat sebuah aplikasi CRUD Manajemen Produk Laptop dengan bahasa pemrograman python.</p>
                             <a href="https://github.com/DwikiAprilianAryanda/Project-Akhir-APD" target="_blank">Lihat Kode &rarr;</a>
                         </div>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section class="testimonial section">
+        <section class="testimonial section hidden" id="testimonial">
             <h2 class="section-title">Testimoni</h2>
             <span class="section-subtitle">Apa kata mereka tentang saya</span>
-
             <div class="testimonial-container container">
                 <div class="testimonial-card">
-                    <img src="assets/zeydan.jpg" alt="Foto Klien 1" class="testimonial-img">
+                    <img src="assets/zeydan.jpg" alt="Foto Zeydan" class="testimonial-img">
                     <h3 class="testimonial-name">Zeydan Fazle M.</h3>
                     <p class="testimonial-client">Mahasiswa Informatika</p>
-                    <p class="testimonial-description">
-                        "Saya sudah berkolaborsi dengan Dwiki, project yang kami lakukan benar-benar berjalan dengan lancar karena skill dan pemahamannya yang sangat membantu dalam project ini."
-                    </p>
+                    <p class="testimonial-description">"Saya sudah berkolaborasi dengan Dwiki, project yang kami lakukan benar-benar berjalan dengan lancar karena skill dan pemahamannya yang sangat membantu dalam project ini."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="assets/tedi.jpg" alt="Foto Klien 2" class="testimonial-img">
+                    <img src="assets/tedi.jpg" alt="Foto Medi Tedi" class="testimonial-img">
                     <h3 class="testimonial-name">Medi Tedi</h3>
                     <p class="testimonial-client">Tim Marketing Perusahaan Ambha</p>
-                    <p class="testimonial-description">
-                        "Visualisasi yang ditampilkan oleh Dwiki sangat mudah dipahami, saya merekomendasikan jasanya kepada anda."
-                    </p>
+                    <p class="testimonial-description">"Visualisasi yang ditampilkan oleh Dwiki sangat mudah dipahami, saya merekomendasikan jasanya kepada anda."</p>
                 </div>
-                </div>
+            </div>
         </section>
 
-        <section class="contact section" id="kontak">
+        <section class="contact section hidden" id="kontak">
             <h2 class="section-title">Hubungi Saya</h2>
             <span class="section-subtitle">Mari Bekerja Sama</span>
-
             <div class="contact-container container grid">
                 <div>
                     <div class="contact-information">
-                        <i class="contact-icon"><i class='bx bx-phone'></i></i>
+                        <i class='bx bx-phone contact-icon'></i>
                         <div>
                             <h3 class="contact-title">Telepon</h3>
                             <span class="contact-subtitle">+62 813-5191-5160</span>
                         </div>
                     </div>
-
                     <div class="contact-information">
-                        <i class="contact-icon"><i class='bx bx-envelope'></i></i>
+                        <i class='bx bx-envelope contact-icon'></i>
                         <div>
                             <h3 class="contact-title">Email</h3>
                             <span class="contact-subtitle">aprilianaryandad@gmail.com</span>
                         </div>
                     </div>
-
                     <div class="contact-information">
-                        <i class="contact-icon"><i class='bx bxs-map'></i></i>
+                        <i class='bx bxs-map contact-icon'></i>
                         <div>
                             <h3 class="contact-title">Lokasi</h3>
                             <span class="contact-subtitle">Samarinda, Indonesia</span>
                         </div>
                     </div>
                 </div>
-
                 <form id="contact-form" action="" class="contact-form grid">
                     <div class="contact-inputs grid">
-                        <div class="contact-content">
-                            <label for="nama" class="contact-label">Nama Lengkap</label>
-                            <input type="text" id="nama" class="contact-input">
-                        </div>
-                        <div class="contact-content">
-                            <label for="email" class="contact-label">Alamat Email</label>
-                            <input type="email" id="email" class="contact-input">
-                        </div>
+                        <div class="contact-content"><label for="nama" class="contact-label">Nama Lengkap</label><input type="text" id="nama" class="contact-input"></div>
+                        <div class="contact-content"><label for="email" class="contact-label">Alamat Email</label><input type="email" id="email" class="contact-input"></div>
                     </div>
-                    <div class="contact-content">
-                        <label for="subjek" class="contact-label">Subjek</label>
-                        <input type="text" id="subjek" class="contact-input">
-                    </div>
-                    <div class="contact-content">
-                        <label for="pesan" class="contact-label">Pesan</label>
-                        <textarea name="pesan" id="pesan" cols="0" rows="7" class="contact-input"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="button">Kirim Pesan</button>
-                    </div>
+                    <div class="contact-content"><label for="subjek" class="contact-label">Subjek</label><input type="text" id="subjek" class="contact-input"></div>
+                    <div class="contact-content"><label for="pesan" class="contact-label">Pesan</label><textarea name="pesan" id="pesan" cols="0" rows="7" class="contact-input"></textarea></div>
+                    <div><button type="submit" class="button">Kirim Pesan</button></div>
                 </form>
             </div>
         </section>
@@ -305,20 +233,18 @@
             <div class="portfolio-popup-inner">
                 <div class="portfolio-popup-content grid">
                     <span class="portfolio-popup-close"><i class='bx bx-x'></i></span>
-                    <div class="portfolio-popup-img-wrapper">
-                        <img src="" alt="" class="portfolio-popup-img">
-                    </div>
+                    <div class="portfolio-popup-img-wrapper"><img src="" alt="" class="portfolio-popup-img"></div>
                     <div class="portfolio-popup-info">
                         <h3 class="portfolio-popup-title"></h3>
                         <p class="portfolio-popup-description"></p>
-                        <div class="portfolio-popup-links">
-                            </div>
+                        <div class="portfolio-popup-links"></div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

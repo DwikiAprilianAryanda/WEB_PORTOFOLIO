@@ -41,6 +41,12 @@
         --h2-font-size: 1.25rem;
     }
 
+    /* Sembunyikan kursor kustom di mobile */
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
     /* Memindahkan Header ke Atas */
     .header {
         top: 0;
@@ -52,23 +58,23 @@
     }
     
     /* Styling Menu Dropdown */
-    .nav-menu {
-        position: fixed;
-        background-color: hsla(var(--hue), 28%, 16%, 0.8);
-        backdrop-filter: blur(10px);
-        top: -100%; /* Mulai dari posisi tersembunyi di atas */
-        left: 0;
-        width: 100%;
-        padding: 4rem 0 3rem;
-        border-radius: 0 0 1.5rem 1.5rem;
-        box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.3);
-        transition: top .4s;
-    }
+.nav-menu {
+    position: fixed;
+    background-color: hsla(var(--hue), 28%, 16%, 0.8);
+    backdrop-filter: blur(10px);
+    top: 0; /* Tetap di atas */
+    left: 0;
+    width: 100%;
+    padding: 4rem 0 3rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.3);
+    transform: translateY(-100%); /* Sembunyikan dengan menggeser ke atas */
+    transition: transform .4s; /* Ubah transisi ke transform */
+}
 
-    /* Kelas untuk menampilkan menu */
-    .show-menu {
-        top: 0;
-    }
+.show-menu {
+    transform: translateY(0); /* Tampilkan dengan menggeser kembali ke posisi 0 */
+}
 
     /* Membuat link menjadi 1 kolom vertikal */
     .nav-list {

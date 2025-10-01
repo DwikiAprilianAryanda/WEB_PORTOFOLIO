@@ -664,3 +664,33 @@ body:hover .cursor-outline {
     color: var(--text-color);
     margin-bottom: var(--mb-1-5);
 }
+
+/* ================================================================
+   KODE BARU UNTUK ANIMASI
+   ================================================================ */
+
+/* 1. CSS UNTUK ANIMASI FADE-IN SAAT SCROLL */
+
+/* Kondisi awal elemen (tersembunyi) */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Kondisi akhir elemen (terlihat) */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 2. CSS UNTUK ANIMASI LATAR BELAKANG PARTIKEL */
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Posisikan di belakang konten hero */
+}

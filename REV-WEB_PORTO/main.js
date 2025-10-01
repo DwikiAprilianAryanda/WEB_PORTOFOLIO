@@ -200,3 +200,85 @@ formKontak.addEventListener('submit', function (e) {
     // 8. Buka link WhatsApp di tab baru
     window.open(whatsappURL, '_blank');
 });
+
+/* ================================================================
+   KODE BARU UNTUK ANIMASI
+   ================================================================ */
+
+/* 1. FUNGSI UNTUK ANIMASI FADE-IN SAAT SCROLL */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // Jika elemen masuk ke dalam viewport (terlihat di layar)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } 
+        // Opsional: hapus else jika tidak ingin animasi berulang
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+// Pilih semua elemen dengan kelas 'hidden'
+const hiddenElements = document.querySelectorAll('.hidden');
+// Minta observer untuk mengamati setiap elemen tersebut
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+/* 2. KONFIGURASI ANIMASI LATAR BELAKANG TSPARTICLES */
+window.addEventListener('load', () => {
+  tsParticles.load("tsparticles", {
+    fpsLimit: 60,
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        resize: true,
+      },
+      modes: {
+        repulse: {
+          distance: 100,
+          duration: 0.4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      links: {
+        color: "#ffffff",
+        distance: 150,
+        enable: true,
+        opacity: 0.2,
+        width: 1,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: "out",
+        random: false,
+        speed: 2,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+        },
+        value: 80,
+      },
+      opacity: {
+        value: 0.2,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 1, max: 3 },
+      },
+    },
+    detectRetina: true,
+  });
+});
